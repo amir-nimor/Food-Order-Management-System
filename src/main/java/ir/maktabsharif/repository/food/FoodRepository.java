@@ -1,4 +1,4 @@
-package ir.maktabsharif.repository;
+package ir.maktabsharif.repository.food;
 
 import ir.maktabsharif.model.Food;
 
@@ -10,8 +10,8 @@ public interface FoodRepository {
 
     List<Food> findAll();
 
-    Food findById(int id);
+    Food findById(Long id);
 
-    int delete(int id);
+    Long delete(Long id);
 
 }

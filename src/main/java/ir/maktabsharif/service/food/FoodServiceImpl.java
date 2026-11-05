@@ -1,7 +1,7 @@
-package ir.maktabsharif.service;
+package ir.maktabsharif.service.food;
 
 import ir.maktabsharif.model.Food;
-import ir.maktabsharif.repository.FoodRepository;
+import ir.maktabsharif.repository.food.FoodRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -27,12 +27,12 @@ public class FoodServiceImpl implements FoodService{
     }
 
     @Override
-    public Food findById(int id) {
+    public Food findById(Long id) {
         return foodRepository.findById(id);
     }
 
     @Override
-    public int delete(int id) {
+    public Long delete(Long id) {
         return foodRepository.delete(id);
     }
 }

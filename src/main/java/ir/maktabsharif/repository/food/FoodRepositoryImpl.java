@@ -1,4 +1,4 @@
-package ir.maktabsharif.repository;
+package ir.maktabsharif.repository.food;
 
 import ir.maktabsharif.model.Food;
 import org.springframework.stereotype.Repository;
@@ -33,13 +33,13 @@ public class FoodRepositoryImpl implements FoodRepository{
     }
 
     @Override
-    public Food findById(int id) {
+    public Food findById(Long id) {
         return FOODS.stream().filter(food -> food.getId() == id).findFirst().orElse(null);
     }
 
 
     @Override
-    public int delete(int id) {
+    public Long delete(Long id) {
         FOODS.remove(FOODS.stream().filter(food -> food.getId() == id).findFirst().get());
         return id;
     }

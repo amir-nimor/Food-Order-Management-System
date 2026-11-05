@@ -1,4 +1,4 @@
-package ir.maktabsharif.service;
+package ir.maktabsharif.service.food;
 
 import ir.maktabsharif.model.Food;
 
@@ -11,7 +11,7 @@ public interface FoodService {
 
     List<Food> findAll();
 
-    Food findById(int id);
+    Food findById(Long id);
 
-    int delete(int id);
+    Long delete(Long id);
 }
